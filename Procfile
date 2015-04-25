@@ -1,0 +1,1 @@
+web: node totp.js
