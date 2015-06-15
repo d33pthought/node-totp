@@ -4,6 +4,10 @@ var speakeasy = require('speakeasy');
 var sites = new Array();
 
 sites.push({
+    "name": '***',
+    "secret": base32.decode('t7jicux44dha34hd')
+});
+sites.push({
     "name": 'NZ Admin',
     "secret": base32.decode('j32x5cc652z74iw2')
 });
