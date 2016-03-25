@@ -41,7 +41,7 @@ my_http.createServer(function(request,response){
     var stepTime = new Date();
     response.writeHeader(200, {"Content-Type": "text/html"});
 
-    response.write(stepTime.getSeconds() % 30 + "/30<br>\n");
+    response.write("myTOTP: " + stepTime.getSeconds() % 30 + "/30<br>\n");
     sites.forEach(function(site, index, sites){
     response.write(site.name + ": " + speakeasy.totp({"key": site.secret, "time": stepTime.getTime()/1000}) + "<br>\n");
     
